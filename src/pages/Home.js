@@ -71,7 +71,7 @@ const Home = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to="/"><img src={categories} className='icon'/><span>Home</span></NavLink>
+            <NavLink to="/"><img src={categories} className='icon' alt="icon"/><span>Home</span></NavLink>
           </li>
           <li>
             <NavLink to="/products">Products</NavLink>
@@ -88,7 +88,7 @@ const Home = () => {
         {carousel.map((item)=>{
             return(
           <div className='carousel'>
-            <img src={item.img}/>  
+            <img src={item.img} alt='item'/>  
               <p>{item.firstSection} <br/> {item.secondSection}</p>
           </div>
 
@@ -101,7 +101,7 @@ const Home = () => {
       return(
 
         <div className='show-item'>
-            <div className='img-container'><img src={eachContent.img}/></div>
+            <div className='img-container'><img src={eachContent.img} alt='images'/></div>
             <div className='foodContent'>{eachContent.content}</div>
         </div>
       )
