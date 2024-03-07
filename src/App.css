@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.App nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(121, 114, 114);
+    /* padding: 8px; */
+    
+   }
+
+   .topic{
+    display: flex;
+    align-items: center;
+}
+
+   .App nav ul{
+    display: flex;
+    justify-content: space-around;
+   }
+   .App nav ul li{
+       display: inline;
+       padding: 6px;
+       margin: 8px;
+       
+   }
+   
+   .App nav ul li a{
+       text-decoration: none;
+       padding: 6px;
+       border-radius: 6px;
+       color: black;
+       font-weight: 500;
+   }
+
+   .App nav ul li a:hover{
+    background-color: rgb(110, 102, 102);
+    color: white;
+    
+   }
+   .App nav ul li a.active{
+    background-color: rgb(65, 60, 60);
+    color: white;
+    
+   }
+
+   .content{
+    text-align: center;
+   }
