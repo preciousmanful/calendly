@@ -14,19 +14,22 @@ const Home = () => {
       id:1,
       firstSection: "Super Taco for",
       secondSection: "whole family",
-      img: cookies
+      img: cookies,
+      alt:"carousel1"
     },
     {
       id:2,
       firstSection: "Super Taco for",
       secondSection: "whole family",
-      img: cookies
+      img: cookies,
+      alt:"carousel3"
     },
     {
       id:3,
       firstSection: "Super Taco for",
       secondSection: "whole family",
-      img: cookies
+      img: cookies,
+      alt:"carousel3"
     }
 
   ]
@@ -88,7 +91,7 @@ const Home = () => {
         {carousel.map((item)=>{
             return(
           <div className='carousel'>
-            <img src={item.img} alt='item'/>  
+            <img src={item.img} alt={item.alt}/>  
               <p>{item.firstSection} <br/> {item.secondSection}</p>
           </div>
 
