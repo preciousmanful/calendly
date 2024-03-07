@@ -1,0 +1,117 @@
+.home{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.leftSideBar{
+    display: fixed;
+    width: 18%;
+    height: 80vh;
+    margin: 80px  16px 0 32px ;
+    font-size: 28px;
+    /* background-color: rgba(117, 113, 113, 0.23); */
+}
+.home .icon{
+    width: 22px;
+    display: inline-block;
+    margin: 0 13px;
+}
+.carouselContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.carousel{
+    display: flex;
+    align-items: flex-end;
+    width: 270px;
+    height: 140px;
+    background-color: aqua;
+    border-radius: 18px;
+    overflow: hidden;
+   position: relative;
+}
+
+.carousel img{
+    width: 100%;
+}
+.carousel p{
+    position: absolute;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 8px;
+    z-index: 999;
+    color: #ffffff;
+}
+
+.rightSideBar{
+    margin: 20px;
+}
+.home h1{
+    margin-bottom: 40px;
+}
+.show-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.show-item{
+    display: flex;
+    align-items: center;
+}
+.show-item .img-container{
+    width: 120px;
+    overflow: hidden;
+    z-index: 111;
+}
+
+.show-item .img-container img{
+    width: 100%;
+   
+}
+
+.show-item .foodContent{
+    background-color: rgba(222, 98, 214, 0.445);
+    width: 190px;
+    height: 72px;
+    padding: 16px 4px 0 30px;  
+    border-radius: 18px;
+    margin-left: -26px;
+}
+
+
+
+.home nav ul{
+    display: flex;
+    flex-direction: column;
+}
+.home  nav ul li{
+       display: inline;
+       padding: 6px;
+       margin: 8px;
+       
+}
+   
+.home nav ul li a{
+    text-align: center;
+     display: inline-block;
+       text-decoration: none;
+       padding: 6px;
+       border-radius: 56px;
+       color: black;
+       font-weight: 500;
+       width: 100%;
+}
+  
+.home nav ul li a:hover{
+    background-color: rgb(110, 102, 102);
+    color: white;
+    
+}
+.home nav ul li a.active{
+    background-color: rgb(65, 60, 60);
+    color: white;
+    
+}
+  

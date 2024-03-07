@@ -1,0 +1,24 @@
+src/
+|-- components/
+|   |-- Header.js
+|   |-- ProductList.js
+|   |-- ProductDetail.js
+|   |-- Cart.js
+|   |-- ...
+|-- pages/
+|   |-- Home.js
+|   |-- ProductListPage.js
+|   |-- ProductDetailPage.js
+|   |-- CartPage.js
+|   |-- ...
+|-- data/
+|   |-- products.js (contains mock product data)
+|-- css/
+|   |-- styles.css
+|   |-- header.css
+|   |-- product-list.css
+|   |-- product-detail.css
+|   |-- cart.css
+|   |-- ...
+|-- App.js
+|-- Router.js
