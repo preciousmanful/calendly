@@ -2,13 +2,76 @@
 import React from 'react';
 import salad from '../data/salad.png'
 import '../css/home.css';
-import categories from '../data/categories.png'
-import cookies from '../data/cookies.jpg'
+import categoriesHover from '../data/Category2-Bold-32px.png';
+import categories from '../data/Category2-Bold-32px (1).png'
+import cookies from '../data/cookies.jpg';
+import search from '../data/SearchNormal1-Bold-32px (1).png';
+import searchHover from '../data/Category2-Bold-32px.png';
+import star from '../data/Star-Bold-32px.png';
+import starHover from '../data/Star-Bold-32px (1).png';
+import heart from '../data/Heart-Bold-32px.png';
+import heartHover from '../data/Heart-Bold-32px (1).png'
 
 import { NavLink } from 'react-router-dom';
 
 const Home = () => {
 
+  const sideBar1= [
+    {
+      id:1,
+      name:"Home",
+      img:categories,
+      alt:"Home icon",
+      href:"/home",
+      imgHover:categoriesHover
+    },
+    {
+      id:2,
+      name:"Browse",
+      img:search,
+      alt:"Home icon",
+      href:"/browse", 
+      imgHover:searchHover
+    },
+    {
+      id:3,
+      name:"For You",
+      img:heart,
+      alt:"Home icon",
+      href:"/",
+      imgHover:heartHover
+    }
+    
+  ]
+  const sideBar2 =[
+    {
+      id:1,
+      name:"Chef",
+      img:categories,
+      alt:"Chef icon",
+      href:"/foods",
+      imgHover:categoriesHover
+    },
+    {
+      id:2,
+      name:"Favorites",
+      img:star,
+      alt:"heart icon",
+      href:"/favourites",
+      imgHover:starHover
+    },
+    {
+      id:3,
+      name:"My Recipes",
+      img:heart,
+      alt:"recipes icon",
+      href:"/recipes",
+      imgHover:categoriesHover
+
+    }
+  ]
+
+  
   const carousel = [
     {
       id:1,
@@ -26,6 +89,13 @@ const Home = () => {
     },
     {
       id:3,
+      firstSection: "Super Taco for",
+      secondSection: "whole family",
+      img: cookies,
+      alt:"carousel3"
+    },
+    {
+      id:4,
       firstSection: "Super Taco for",
       secondSection: "whole family",
       img: cookies,
@@ -73,15 +143,24 @@ const Home = () => {
       <div className='leftSideBar'>
       <nav>
         <ul>
+          <li className='subTopic'>DISCOVER</li>
+          {sideBar1.map((eachBar)=>{ 
+            return(
           <li>
-            <NavLink to="/"><img src={categories} className='icon' alt="icon"/><span>Home</span></NavLink>
-          </li>
+            <NavLink to={eachBar.href}><img src={eachBar.img} className='icon' alt={eachBar.alt}/><span>{eachBar.name}</span></NavLink>
+          </li> 
+          
+          )
+        })} 
+        <li className='subTopic'>LIBRARY</li>
+        {sideBar2.map((eachBar)=>{ 
+            return(
           <li>
-            <NavLink to="/products">Products</NavLink>
-          </li>
-          <li>
-            <NavLink to="/cart" disabled>Cart</NavLink>
-          </li>
+            <NavLink to={eachBar.href}><img src={eachBar.img} className='icon' alt={eachBar.alt}/><span>{eachBar.name}</span></NavLink>
+          </li> 
+          
+          )
+        })}
         </ul>
       </nav>
       </div>:

@@ -3,24 +3,23 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import '../css/header.css'; // Import the corresponding CSS file
-
+import userImage from '../data/user.png';
 
 const Header = () => {
   return (
     <header>
       <nav>
         <NavLink to="/" className='logo'>Cookz</NavLink>
-        <input type='text' placeholder='search'/>
+        <input type='text' placeholder='Search recipes by name, ingredient and ets...'/>
         <ul>
+          
           <li>
-            <NavLink to="/">Home</NavLink>
+          <NavLink to="/profile" className='profile'>
+            <img src={userImage} className='userImage'/>
+            <div>Precious Adwoa</div>
+          </NavLink>
           </li>
-          <li>
-            <NavLink to="/products">Products</NavLink>
-          </li>
-          <li>
-            <NavLink to="/cart" disabled>Cart</NavLink>
-          </li>
+          
         </ul>
       </nav>
     </header>

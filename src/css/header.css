@@ -7,26 +7,61 @@
 
 header nav{
   display: flex;
-  justify-content: space-between;
-  background-color: rgba(171, 164, 164, 0.732);
-  /* padding: 8px; */
+  justify-content: space-around;
+  background-color: rgba(144, 130, 130, 0);
   
  }
 
  .logo{
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  font-weight: 800;
-  color: aliceblue;
-  text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 800;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-left: 36px;
+    flex-basis: 200px;
 }
 input{
+  align-self: center;
   margin: 8px;
   border-radius: 8px;
-  border: 1px solid #ababab;
-  padding: 4px;
-  width: 20%;
+  border: 1px solid #ffffff;
+  padding: 0 4px;
+  max-width: 100%;
+  height: 30px;
+  background: linear-gradient(to right,#c4bfbf5b, #c4bfbf00);
+  justify-self: flex-start;
+  flex-basis: 60%;
+}
+input:hover{
+  background: linear-gradient(to right, rgb(108, 103, 103), rgba(108, 103, 103, 0.438));
+}
+input:focus{
+  background-color: rgba(85, 81, 81, 0.733);
+  border: 1px solid #ffffff;
+}
+input::placeholder{
+  font-style: italic;
+}
+input:hover::placeholder{
+  color: #fff;
+}
+input:focus::placeholder{
+  color: #fff;
+}
+
+.profile{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-basis: 50%;
+}
+.userImage{
+  width: 32px;
+  border-radius: 50px;
+  border: 2px solid rgb(251, 118, 140);
 }
  header nav ul{
   display: flex;
@@ -34,7 +69,8 @@ input{
  }
  header nav ul li{
      display: inline;
-     padding: 6px;
+     align-self: center;
+     padding: 1px;
      margin: 8px;
      
  }
@@ -55,9 +91,19 @@ input{
  header nav ul li a.active{
   background-color: rgb(65, 60, 60);
   color: white;
-  
- }
 
+ }
+ header nav ul li .profile:hover{
+  background-color: rgba(110, 102, 102, 0);
+  color: rgb(98, 91, 91);
+  text-decoration: underline;
+ }
+ header nav ul li .profile.active{
+  background-color: rgba(255, 255, 255, 0);
+  /* text-decoration: underline; */
+  color: rgb(0, 0, 0);
+
+ }
  .content{
   text-align: center;
  }
