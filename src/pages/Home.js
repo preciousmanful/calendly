@@ -10,7 +10,8 @@ import searchHover from '../data/Category2-Bold-32px.png';
 import star from '../data/Star-Bold-32px.png';
 import starHover from '../data/Star-Bold-32px (1).png';
 import heart from '../data/Heart-Bold-32px.png';
-import heartHover from '../data/Heart-Bold-32px (1).png'
+import heartHover from '../data/Heart-Bold-32px (1).png';
+import leaf from '../data/leaf.png';
 
 import { NavLink } from 'react-router-dom';
 
@@ -104,37 +105,99 @@ const Home = () => {
 
   ]
 
-  const homeContent =[
+  const recipes =[
     {
       id:1,
       img:salad,
-      content:"Spaghetti with tomato sauce"
+      content:"Spaghetti with tomato sauce",
+      color:"lightblue",
+      tag: true
     },
     {
       id:2,
       img:salad,
-      content:"Spaghetti with tomato sauce"
+      content:"Salad with rice and kimchi",
+      color:"rgb(211, 131,156)",
+      tag: true
     },
     {
       id:3,
       img:salad,
-      content:"Spaghetti with tomato sauce"
+      content:"Pancake with raspberry sauce",
+      color:"rgb(211, 231,156)",
+      tag: true
     },
     {
       id:4,
       img:salad,
-      content:"Spaghetti with tomato sauce"
+      content:"Rice with shrimps and green peas",
+      color:"rgb(211, 131,256)",
+      tag: true
     },
     {
       id:5,
       img:salad,
-      content:"Spaghetti with tomato sauce"
+      content:"Curry with chicken and onion",
+      color:"rgb(211, 231,256)",
+      tag: true
     },
     {
       id:6,
       img:salad,
-      content:"Spaghetti with tomato sauce"
+      content:"Spicy lentil cream soup",
+      color:"rgb(111, 231,256)",
+      tag: true
+    },
+    {
+      id:7,
+      img:salad,
+      content:"Spaghetti with tomato sauce",
+      color:"rgb(233,211,117)",
+      tag: true
+    },
+    {
+      id:8,
+      img:salad,
+      content:"Spaghetti with tomato sauce",
+      color:"rgb(111, 211,111)",
+      tag: true
+    },
+    {
+      id:9,
+      img:salad,
+      content:"Spaghetti with tomato sauce",
+      color:"rgb(211, 131,156)",
+      tag: true
+    },
+    {
+      id:10,
+      img:salad,
+      content:"Spaghetti with tomato sauce",
+      color:"rgb(211, 231,156)",
+      tag: true
+    },
+    {
+      id:11,
+      img:salad,
+      content:"Spaghetti with tomato sauce",
+      color:"rgb(211, 131,256)",
+      tag: true
+    },
+    {
+      id:12,
+      img:salad,
+      content:"Spaghetti with tomato sauce",
+      color:"rgb(211, 231,256)",
+      tag: true
+    },
+    {
+      id:13,
+      img:salad,
+      content:"Spaghetti with tomato sauce",
+      color:"rgb(111, 231,256)",
+      tag: true
     }
+    
   ]
   const screenWidth = window.innerWidth >800;
   return (
@@ -178,13 +241,14 @@ const Home = () => {
         </div>
       <h1>Daily best recipes</h1>
       <div className='show-container'>
-     {homeContent.map((eachContent)=>{ 
+     {recipes.map((eachContent)=>{ 
 
       return(
 
         <div className='show-item'>
             <div className='img-container'><img src={eachContent.img} alt='images'/></div>
-            <div className='foodContent'>{eachContent.content}</div>
+            <div className='foodContent' style={{backgroundColor:eachContent.color}}>{eachContent.content}</div>
+            <div className='tag'><img src={leaf} alt='heart'/></div>
         </div>
       )
 
