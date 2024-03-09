@@ -12,6 +12,18 @@ import starHover from '../data/Star-Bold-32px (1).png';
 import heart from '../data/Heart-Bold-32px.png';
 import heartHover from '../data/Heart-Bold-32px (1).png';
 import leaf from '../data/leaf.png';
+import greanpeas from '../data/greenpeas-removebg-preview.png';
+import saladDinners from '../data/salad_dinners-removebg-preview.png';
+import spaghetti from '../data/spaghetti-removebg-preview.png';
+import lentil from '../data/lentil-removebg-preview.png';
+import pancake from '../data/pancake.png';
+import chicken from '../data/CHICKEN-CURRY.png';
+import kelowana from '../data/kelowana.png';
+import bestChineseFood from '../data/bestchinesefood.webp';
+import chineseFood from '../data/chineseFood.avif'
+import sushie from '../data/sushi.jpg'
+
+
 
 import { NavLink } from 'react-router-dom';
 
@@ -83,24 +95,24 @@ const Home = () => {
     },
     {
       id:2,
-      firstSection: "Super Taco for",
-      secondSection: "whole family",
-      img: cookies,
-      alt:"carousel3"
+      firstSection: "Chicken Curry",
+      secondSection: "in the making",
+      img: bestChineseFood,
+      alt:"carousel2"
     },
     {
       id:3,
-      firstSection: "Super Taco for",
-      secondSection: "whole family",
-      img: cookies,
+      firstSection: "Summing is coming",
+      secondSection: "Be ready",
+      img: chineseFood,
       alt:"carousel3"
     },
     {
       id:4,
-      firstSection: "Super Taco for",
-      secondSection: "whole family",
-      img: cookies,
-      alt:"carousel3"
+      firstSection: "Making sushi at",
+      secondSection: "home",
+      img: sushie,
+      alt:"carousel4"
     }
 
   ]
@@ -108,7 +120,7 @@ const Home = () => {
   const recipes =[
     {
       id:1,
-      img:salad,
+      img:spaghetti,
       content:"Spaghetti with tomato sauce",
       color:"lightblue",
       tag: true
@@ -122,35 +134,35 @@ const Home = () => {
     },
     {
       id:3,
-      img:salad,
+      img:pancake,
       content:"Pancake with raspberry sauce",
       color:"rgb(211, 231,156)",
       tag: true
     },
     {
       id:4,
-      img:salad,
+      img:greanpeas,
       content:"Rice with shrimps and green peas",
       color:"rgb(211, 131,256)",
       tag: true
     },
     {
       id:5,
-      img:salad,
+      img:chicken,
       content:"Curry with chicken and onion",
       color:"rgb(211, 231,256)",
       tag: true
     },
     {
       id:6,
-      img:salad,
+      img:lentil,
       content:"Spicy lentil cream soup",
       color:"rgb(111, 231,256)",
-      tag: true
+      tag: false
     },
     {
       id:7,
-      img:salad,
+      img:spaghetti,
       content:"Spaghetti with tomato sauce",
       color:"rgb(233,211,117)",
       tag: true
@@ -158,30 +170,30 @@ const Home = () => {
     {
       id:8,
       img:salad,
-      content:"Spaghetti with tomato sauce",
+      content:"Spicy lentil cream soup",
       color:"rgb(111, 211,111)",
-      tag: true
+      tag: false
     },
     {
       id:9,
-      img:salad,
-      content:"Spaghetti with tomato sauce",
+      img:kelowana,
+      content:"Chinese Kelowana with peas",
       color:"rgb(211, 131,156)",
-      tag: true
+      tag: false
     },
     {
       id:10,
-      img:salad,
+      img:saladDinners,
       content:"Spaghetti with tomato sauce",
       color:"rgb(211, 231,156)",
       tag: true
     },
     {
       id:11,
-      img:salad,
+      img:lentil,
       content:"Spaghetti with tomato sauce",
       color:"rgb(211, 131,256)",
-      tag: true
+      tag: false
     },
     {
       id:12,
@@ -192,10 +204,10 @@ const Home = () => {
     },
     {
       id:13,
-      img:salad,
+      img:lentil,
       content:"Spaghetti with tomato sauce",
       color:"rgb(111, 231,256)",
-      tag: true
+      tag: false
     }
     
   ]
@@ -248,7 +260,7 @@ const Home = () => {
         <div className='show-item'>
             <div className='img-container'><img src={eachContent.img} alt='images'/></div>
             <div className='foodContent' style={{backgroundColor:eachContent.color}}>{eachContent.content}</div>
-            <div className='tag'><img src={leaf} alt='heart'/></div>
+            { eachContent.tag && <div className='tag'><img src={leaf} alt='heart'/></div>}
         </div>
       )
 
