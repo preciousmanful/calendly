@@ -15,7 +15,7 @@ const Header = () => {
           
           <li>
           <NavLink to="/profile" className='profile'>
-            <img src={userImage} className='userImage'/>
+            <img src={userImage} className='userImage' alt='profilePic'/>
             <div>Precious Adwoa</div>
           </NavLink>
           </li>
