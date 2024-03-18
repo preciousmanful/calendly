@@ -1,6 +1,6 @@
 // data/products.js
 
-import cookies from './cookies.jpg'
+import cookies from '../assets/cookies.jpg'
 
 const products = [
     {
@@ -42,5 +42,5 @@ const products = [
     
   ];
   
+
   export default products;
-  
